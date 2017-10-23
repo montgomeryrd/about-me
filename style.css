@@ -1,0 +1,48 @@
+/*In the Header*/
+header {
+  background: #f2f6fa;
+  color: #FFF;
+  font-size: 30px;
+  height: 150px;
+  margin-top: auto;
+  margin-bottom: 40px;
+}
+/*End of header*/
+
+/*A little about me*/
+.about {
+  text-align: left;
+  width: 400px;
+  margin-left: 10px;
+}
+
+body {
+    background: #f2f6fa;
+}
+
+/*My Name plus a Photo of myself*/
+h1 {
+  font: Arial;
+  font-size: 60px;
+  color: #45ADA8;
+}
+
+section {
+  text-align: center;
+  margin: auto;
+}
+
+.selfie {
+  border-style: solid;
+  border-width: thin;
+  margin: auto;
+}
+
+/*Here are a couple of lists. One ordered list and one unordered list.*/
+.unordered {
+  text-align: left;
+}
+
+.ordered {
+  text-align: left;
+}
