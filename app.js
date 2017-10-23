@@ -2,75 +2,55 @@
 //Beginning of ASSIGNMENT TWO
 
 //Introduction and Rules to my Guessing Game
-alert('I want you to play a guessing game. \nThey call it "How well do you know Richard?" \n\nThe only site that knows you care!');
+alert('Welcome to my About Me page.');
+alert('I want to play a game. \n\nI\'m calling it: "How well do you know Richard?');
 alert('You will be given 5 questions about me.\n\n Answer with a "yes" or "y" or with a "no" or "n"');
 
 //User enters their name
-var user = prompt('Well Player, let\'s start by getting your name:');
+var user = prompt('Let\'s start by getting your name:');
 console.log('User\'s name:', user);
 
 alert('Thank you ' + user + '. Let\'s play!');
 
-//Question 1
-var one = prompt('Given the option of mutant abilities, would I want to be able to fly?');
-console.log('Question One Answer:', one);
+//My 5 questions
+function question(textofquestion) {
+  var answer = prompt(textofquestion);
+  console.log('answer', answer);
+  return answer;
+}
 
-one = one.toLowerCase();
+function yesOrNo() {
+  if(answer === 'yes' || answer === 'y') {
+    alert('Nope.');
+  } else if(answer === 'no' || answer === 'n'){
+    alert('Correct!');
+  };
+}
 
-if(one === 'yes' || one === 'y') {
-  alert('Nah... I have a reasonable fear of heights that has preserved my health.');
-} else if(one === 'no' || one === 'n'){
-  alert('That\'s right! Flying is for squirrels and fish.');
-};
+function lowerCase() {
+  answer = answer.toLowerCase();
+}
 
-//Question 2
-var two = prompt('Am I tired often?');
-console.log('Question Two Answer:', two);
+var answer = question('Would I want to fly?');
+lowerCase();
+yesOrNo();
 
-two = two.toLowerCase();
+var answer = question('Do I enjoy porter beers?');
+lowerCase();
+yesOrNo();
 
-if(two === 'yes' || two === 'y') {
-  alert('Yes! Very often. I take a car/boat/bus-ride to class and back.');
-} else if(two === 'no' || two === 'n'){
-  alert('That\'s incorrect. I\'m so tired. I survive on 15 second micro naps.');
-};
+var answer = question('Does anchovies belong on pizza?');
+lowerCase();
+yesOrNo();
 
-//Question 3
-var three = prompt('Are lagers my favorite beers?');
-console.log('Question Three Answer:', three);
+var answer = question('Am I in a secret society?');
+lowerCase();
+yesOrNo();
 
-three = three.toLowerCase();
+var answer = question('Have I ever eaten a crayon');
+lowerCase();
+yesOrNo();
 
-if(three === 'yes' || three === 'y') {
-  alert('Nope. IPAs are the right PAs.');
-} else if(three === 'no' || three === 'n'){
-  alert('That\'s right! IPAs are the right PAs.');
-};
-
-//Question 4
-var four = prompt('Should they reboot the tv series Firefly?');
-console.log('Question Four Answer:', four);
-
-four = four.toLowerCase();
-
-if(four === 'yes' || four === 'y') {
-  alert('They absolutely should. Some of us wonder what\'s taking so long.');
-} else if(four === 'no' || four === 'n'){
-  alert('Honestly, the answer "No" shouldn\'t even be a choice.');
-};
-
-//Question 5
-var five = prompt('Is money the root of my happiness?');
-console.log('Question Five Answer:', five);
-
-five = five.toLowerCase();
-
-if(five === 'yes' || five === 'y') {
-  alert('Oh, for sho.');
-} else if(five === 'no' || five === 'n'){
-  alert('Yea... I guess it isn\'t everything...');
-};
-//End of ASSIGNMENT TWO
 
 //Beginning of ASSIGNMENT THREE
 //Question 6
@@ -96,28 +76,6 @@ while(counter < 5){
     break;
   }
 }
-
-
-/*THIS was an exercise in not reading thoroughly
-var user = prompt('What\'s your name again?');
-console.log('User\'s name:', user);
-
-alert('So anyways ' + user + '. Soon it will be Halloween. I think it\'s a good idea to make a list of scary things to avoid this year. Thing\'s like Heights, Public Pooping, and Narcissists in Power.');
-
-var list = ['Height\'s', ' Pooping in Public Places', ' Narcissists'];
-
-for(var i = 0 ; i < list.length ; i++){
-  var answer = prompt('What else should we add to the Scary List?');
-  console.log('Each scary iteration:', answer);
-  list.push(' ' + answer);
-  if(i === 2) {
-    break;
-  }
-}
-
-alert('The Scary List is Complete!');
-alert(list + '.');
-THIS is the end of that mishap*/
 
 //Question 7
 function questions(textofquestion) {
@@ -150,3 +108,21 @@ while(guesses < 6) {
   }
 }
 alert('Nice guesses. You got ' + correct + ' correct out of 6');
+
+//THIS was an exercise in not reading the assignment thoroughly and doing it incorrectly. We'll call it a bonus game.
+alert('So... ' + user + ' I read an assignment incorrectly one day and produced this app that pushes your answers to a list. Indulge me for the next few prompts.');
+alert('Soon it will be Halloween. I think it\'s a good idea to make a list of scary things to avoid this year. Thing\'s like Heights, Public Pooping, and Narcissists in Power.');
+
+var list = ['Height\'s', ' Pooping in Public Places', ' Narcissists'];
+
+for(var j = 0 ; j < list.length ; j++){
+  var answerNew = prompt('What else should we add to the Scary List?');
+  console.log('Each scary iteration:', answerNew);
+  list.push(' ' + answerNew);
+  if(j === 2) {
+    break;
+  }
+}
+
+alert('The Scary List is Complete!');
+alert(list + '.');
